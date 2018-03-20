@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>File Upload Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="container" style="padding: 100px;">
+    <form class="form-signin" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Upload the test data in csv format</h1>
+        <p> The uploaded file will be submitted to the trained document classifier to classify the examples</p>
+      </div>
+
+      <div class="form-label-group">
+        <input type="file" id="inputFile" class="form-control" placeholder="File input" name="file" required autofocus>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" value="Upload">Submit</button>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; Shreyas</p>
+    </form>
+  </div>
+  </body>
+</html>

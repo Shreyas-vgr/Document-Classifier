@@ -1,0 +1,7 @@
+#! /bin/sh
+source ~/eb-virt/bin/activate
+pip freeze > requirements.txt
+deactivate
+eb init document-classifier
+eb create flask-env
+

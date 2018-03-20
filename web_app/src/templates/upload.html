@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+
+    <title>File Upload Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container" style="padding: 100px;">
+     <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Succesfully uploaded</h1>
+        <h3>Results</h3>
+        {% for value in result %}
+          <li class="list-group-item">{{ value }} </li>
+        {% endfor %}
+        <h4><a href="/"> Go home </a></h4>
+      </div>
+
+      <p class="mt-5 mb-3 text-muted text-center">&copy; Shreyas</p>
+  </div>
+  </body>
+</html>
